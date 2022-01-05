@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    container_name: "bigbrain_backend"
+    volumes:
+      - "/home/sysadmin/bigbrain/static:/BigBrain/src/static"
+      - "/home/sysadmin/bigbrain/media:/BigBrain/src/media"
+      - "/home/sysadmin/bigbrain/db:/BigBrain/src/db"
+    ports: 
+      - "8000:8000"
+    restart: always
